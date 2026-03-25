@@ -41,9 +41,15 @@
           class="relative flex h-8 w-8 flex-col items-center justify-center gap-1.5 md:hidden"
           aria-label="Toggle navigation"
         >
-          <span class="block h-1 w-7 bg-white transition-all duration-300"></span>
-          <span class="block h-1 w-7 bg-white transition-all duration-300"></span>
-          <span class="block h-1 w-7 bg-white transition-all duration-300"></span>
+          <span
+            class="block h-1 w-7 bg-white transition-all duration-300"
+          ></span>
+          <span
+            class="block h-1 w-7 bg-white transition-all duration-300"
+          ></span>
+          <span
+            class="block h-1 w-7 bg-white transition-all duration-300"
+          ></span>
         </button>
         <div id="menuLinks" class="hidden md:flex md:items-center md:gap-3">
           <a
@@ -93,6 +99,33 @@
         </div>
       </div>
     </header>
+
+    <main>
+      <section
+        class="border-b-4 border-black bg-blue-500 px-6 py-20 text-white md:py-32"
+      >
+        <div class="mx-auto max-w-6xl">
+          <h1 class="text-5xl font-bold leading-tight md:text-7xl">
+            Hey, I'm Meinarus!
+          </h1>
+          <p class="mt-4 max-w-2xl text-xl md:text-2xl">
+            Check out my passions, favorite things, and goals. Feel free to
+            explore.
+          </p>
+          <a
+            href="#passions"
+            class="mt-8 inline-block border-4 border-black bg-amber-400 px-8 py-4 text-lg font-bold text-black shadow-[8px_8px_0px_#000] transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
+            >Explore</a
+          >
+        </div>
+      </section>
+
+      <div class="border-b-4 border-black bg-amber-400 py-4 text-center">
+        <p class="text-2xl font-bold tracking-widest text-black uppercase">
+          Coding. Gaming. Growing.
+        </p>
+      </div>
+    </main>
 
     <script>
       document.getElementById("menuBtn").addEventListener("click", function () {
