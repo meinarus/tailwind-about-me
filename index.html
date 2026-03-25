@@ -19,5 +19,91 @@
       }
     </style>
   </head>
-  <body class="bg-cream font-sans text-slate-800"></body>
+  <body class="bg-cream font-sans text-slate-800">
+    <header
+      class="sticky top-0 z-50 border-b-4 border-black bg-slate-800 text-white"
+    >
+      <nav
+        class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
+      >
+        <a href="#" class="flex items-center gap-2 text-xl font-bold">
+          <img
+            src="img/meinarus.png"
+            alt="Logo"
+            width="32"
+            height="32"
+            class="border-2 border-white"
+          />
+          Meinarus
+        </a>
+        <button
+          id="menuBtn"
+          class="relative flex h-8 w-8 flex-col items-center justify-center gap-1.5 md:hidden"
+          aria-label="Toggle navigation"
+        >
+          <span class="block h-1 w-7 bg-white transition-all duration-300"></span>
+          <span class="block h-1 w-7 bg-white transition-all duration-300"></span>
+          <span class="block h-1 w-7 bg-white transition-all duration-300"></span>
+        </button>
+        <div id="menuLinks" class="hidden md:flex md:items-center md:gap-3">
+          <a
+            href="#passions"
+            class="block border-2 border-white px-4 py-2 font-bold transition-all hover:bg-white hover:text-slate-800"
+            >Passions</a
+          >
+          <a
+            href="#favorites"
+            class="block border-2 border-white px-4 py-2 font-bold transition-all hover:bg-white hover:text-slate-800"
+            >Favorites</a
+          >
+          <a
+            href="#goals"
+            class="block border-2 border-white px-4 py-2 font-bold transition-all hover:bg-white hover:text-slate-800"
+            >Goals</a
+          >
+          <a
+            href="#contact"
+            class="block border-2 border-white px-4 py-2 font-bold transition-all hover:bg-white hover:text-slate-800"
+            >Contact</a
+          >
+        </div>
+      </nav>
+      <div id="mobileMenu" class="hidden border-t-2 border-white md:hidden">
+        <div class="flex flex-col gap-2 px-6 py-4">
+          <a
+            href="#passions"
+            class="border-2 border-white px-4 py-2 font-bold transition-all hover:bg-white hover:text-slate-800"
+            >Passions</a
+          >
+          <a
+            href="#favorites"
+            class="border-2 border-white px-4 py-2 font-bold transition-all hover:bg-white hover:text-slate-800"
+            >Favorites</a
+          >
+          <a
+            href="#goals"
+            class="border-2 border-white px-4 py-2 font-bold transition-all hover:bg-white hover:text-slate-800"
+            >Goals</a
+          >
+          <a
+            href="#contact"
+            class="border-2 border-white px-4 py-2 font-bold transition-all hover:bg-white hover:text-slate-800"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <script>
+      document.getElementById("menuBtn").addEventListener("click", function () {
+        document.getElementById("mobileMenu").classList.toggle("hidden");
+        const spans = this.querySelectorAll("span");
+        spans[0].classList.toggle("translate-y-2.5");
+        spans[0].classList.toggle("rotate-45");
+        spans[1].classList.toggle("opacity-0");
+        spans[2].classList.toggle("-translate-y-2.5");
+        spans[2].classList.toggle("-rotate-45");
+      });
+    </script>
+  </body>
 </html>
